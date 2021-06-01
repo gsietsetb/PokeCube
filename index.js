@@ -1,9 +1,3 @@
-/**
- * @format
- */
-
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);
+// this will automatically resolve to the native or web AppEntry file
+// so we can add custom things inside the web / native version
+import './src';
