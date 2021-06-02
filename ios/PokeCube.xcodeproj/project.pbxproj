@@ -145,7 +145,6 @@
 				90FCCA2A1A23D97A88E63D59 /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */,
 				BE9DA891BC277DBDC8686BBF /* Pods-PokeCube-PokeCubeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -267,7 +266,7 @@
 		};
 		2C99FFB527EB4F367DCAC64E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -277,7 +276,7 @@
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
@@ -485,6 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2VRYC5MZW;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PokeCube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +511,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T2VRYC5MZW;
 				INFOPLIST_FILE = PokeCube/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

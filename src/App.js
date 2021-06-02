@@ -1,11 +1,30 @@
-import C, { apply, extend } from 'consistencss';
-import { observer } from 'mobx-react-lite';
-import React, { useEffect } from 'react';
-import { FlatList, Image, Linking, LogBox, SafeAreaView, Text, TextInput, View } from 'react-native';
-import { PokeDetailsModal } from './Comp/PokeDetailsModal';
-import { PokeSummary } from './Comp/PokeSummary';
-import { PokeStore } from './store/pokeStore';
-import { colors, deviceHeight, deviceWidth, fonts, headerWrapper, imgBig, imgs, imgSmall } from './style/gStyles';
+import C, {apply, extend} from 'consistencss';
+import {observer} from 'mobx-react-lite';
+import React, {useEffect} from 'react';
+import {
+  ActivityIndicator,
+  FlatList,
+  Image,
+  Linking,
+  LogBox,
+  SafeAreaView,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import {PokeDetailsModal} from './Comp/PokeDetailsModal';
+import {PokeSummary} from './Comp/PokeSummary';
+import {PokeStore} from './store/pokeStore';
+import {
+  colors,
+  deviceHeight,
+  deviceWidth,
+  fonts,
+  headerWrapper,
+  imgs,
+  imgXS,
+} from './style/gStyles';
 
 extend({colors: {...colors}});
 
@@ -13,7 +32,7 @@ LogBox.ignoreAllLogs();
 LogBox.ignoreLogs(['Warning', 'MobX']);
 export const pokeStore = PokeStore();
 const App = observer(() => {
-  const {filterList, loading} = pokeStore;
+  const {filterList, loading, count} = pokeStore;
   const fetchPokemon = () => pokeStore.fetchList();
 
   useEffect(() => {
@@ -24,8 +43,12 @@ const App = observer(() => {
     <SafeAreaView style={apply(C.flex, C.itemsCenter)}>
       <View style={headerWrapper}>
         <View style={apply(C.row)}>
-          <Image resizeMode={'contain'} source={imgs.charm} style={imgSmall} />
-          <Text style={[fonts.title1, C.selfCenter]}>PokéPedia</Text>
+          <Image
+            resizeMode={'contain'}
+            source={imgs.sideCube}
+            style={[imgXS, C.mr4]}
+          />
+          <Text style={[fonts.title1, C.selfCenter]}>PokéCube</Text>
         </View>
         <Text
           onPress={() => Linking.openURL('https://guillesierra.com/')}
@@ -58,31 +81,58 @@ const App = observer(() => {
         <Text
           style={[C.mx2, C.textBlue]}
           onPress={() => pokeStore.clearSearch()}>
-          ({filterList.length}) {pokeStore.search.length > 0 && '❌'}
+          ({filterList.length} / {count}) {pokeStore.search.length > 0 && '❌'}
         </Text>
       </View>
 
-      <View style={apply(C.flex, {minHeight: deviceHeight * 0.8, width: deviceWidth * 0.9})}>
+      <View
+        style={apply(C.flex, {
+          minHeight: deviceHeight * 0.8,
+          width: deviceWidth * 0.9,
+        })}>
         <FlatList
           data={filterList}
           refreshing={loading}
-          ListEmptyComponent={
-            <Image resizeMode={'contain'} source={imgs.spin} style={imgBig} />
+          ListFooterComponent={
+            loading && <ActivityIndicator animating size="large" />
           }
           extraData={pokeStore}
           onScrollEndDrag={() => pokeStore.fetchList(true)}
           onRefresh={fetchPokemon}
+          onMomentumScrollBegin={() => pokeStore.fetchList(true)}
           keyExtractor={({key}) => key}
           renderItem={({item, index}) => (
             <PokeSummary url={item.url} name={item.name} />
           )}
         />
       </View>
+
       <PokeDetailsModal
         visibe={pokeStore.showModal}
         pokemon={pokeStore.currentPokemon}
         closeModal={() => pokeStore.setModal()}
       />
+
+      <TouchableOpacity
+        style={[
+          C.bgBlue,
+          C.shadow,
+          C.px4,
+          C.py2,
+          C.radius3,
+          C.absolute,
+          C.bottom10,
+        ]}
+        onPress={() => {
+          pokeStore.fetchList(true);
+          window.scrollTo(0, 1200);
+        }}>
+        {loading ? (
+          <ActivityIndicator animating size="large" />
+        ) : (
+          <Text style={[fonts.body1, C.textWhite]}>Load 20 more...</Text>
+        )}
+      </TouchableOpacity>
     </SafeAreaView>
   );
 });

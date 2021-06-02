@@ -141,6 +141,7 @@ export const topBorder = {
 };
 
 export const imgs = {
+  sideCube: {uri: 'https://3sidedcube.com/app/themes/tsc-2018/img/svgs/logo-dark.svg'},
   charm: isWeb
     ? {
         uri:

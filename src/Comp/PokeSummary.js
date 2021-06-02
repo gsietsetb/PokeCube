@@ -1,9 +1,20 @@
-import C, { apply } from 'consistencss';
-import React, { useCallback, useEffect, useState } from 'react';
-import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
-import { pokeStore } from '../App';
-import { fetchAPI, PokemonStore, statIconMap } from '../store/pokeStore';
-import { bordColor, cell, colors, deviceHeight, deviceWidth, fonts, grad, imgBig, isWeb, textColor } from '../style/gStyles';
+import C, {apply} from 'consistencss';
+import React, {useCallback, useEffect, useState} from 'react';
+import {FlatList, Image, Text, TouchableOpacity, View} from 'react-native';
+import {pokeStore} from '../App';
+import {fetchAPI, PokemonStore, statIconMap} from '../store/pokeStore';
+import {
+  bordColor,
+  cell,
+  colors,
+  deviceHeight,
+  deviceWidth,
+  fonts,
+  grad,
+  imgBig,
+  isWeb,
+  textColor,
+} from '../style/gStyles';
 
 export const ImgCarrousel = ({imgs = [], isSmall = false}) => {
   const [imgIndex, setImgIndex] = useState(0);
@@ -45,19 +56,49 @@ export const PokeStats = ({list = []}) =>
       horizontal={isWeb}
       numColumns={!isWeb ? 3 : 1}
       renderItem={({item}) => (
-        <Text style={apply(fonts.body1, C.textBlue, C.m2)}>
+        <Text style={apply(fonts.body1, C.textBlue, C.mr2, C.p2)}>
           {statIconMap[item.stat.name]} {item.base_stat}
         </Text>
       )}
     />
   );
+const mainSkills = [
+  {icon: '⭐', name: 'base_experience'},
+  {icon: '📏', name: 'height', unit: 'cm'},
+  {
+    icon: '⚖️',
+    name: 'weight',
+    unit: 'kg',
+  },
+];
 
+export const MainSkills = ({extra}) => (
+  <View style={[C.row, C.my3, C.justifyCenter, C.itemsCenter]}>
+    {mainSkills.map(({unit, name, icon}) => (
+      <View style={[C.row, C.mr4]}>
+        <Text style={apply(fonts.body1)}>{icon}</Text>
+        <Text style={apply(fonts.body1, C.mx2, C.selfCenter)}>
+          {extra[name]}
+        </Text>
+        {unit && (
+          <Text style={apply(fonts.caption, C.selfCenter, C.textGrey)}>
+            {unit}
+          </Text>
+        )}
+      </View>
+    ))}
+  </View>
+);
+
+/**In order to show the Sprite and other skills,
+ *  we need to load all the Pokemon info,
+ * even though is not the most efficient approach...*/
 export const PokeSummary = ({url, name}) => {
   const [currImgs, setImgs] = useState([]);
   const [extra, setExtra] = useState([]);
 
   const fetchCurrent = useCallback(async () => {
-    const data = await fetchAPI({endpoint: url});
+    const data = await fetchAPI({url: url});
     setImgs(
       Object.values(data?.sprites).filter(
         value => value?.toString()[0].toLowerCase() === 'h',
@@ -90,10 +131,7 @@ export const PokeSummary = ({url, name}) => {
         <Text style={apply(fonts.subtitle, C.textBlue, C.capitalize)}>
           {extra.id} - {name}
         </Text>
-        <Text style={apply(fonts.body1, C.m2)}>
-          ⭐️{extra.base_experience} {'  '} 📏 {extra.height} cm {'  '} ⚖️
-          {extra.weight} kg
-        </Text>
+        <MainSkills extra={extra} />
         {extra.stats && <PokeStats list={Object.values(extra.stats)} />}
       </View>
     </TouchableOpacity>
@@ -111,17 +149,23 @@ export const PokemonDetails = ({pokemon, withDetails = false}) => {
         <Text style={apply(fonts.subtitle, C.textBlue, C.capitalize)}>
           {extra.id} - {name}
         </Text>
-        <Text style={apply(fonts.body1, C.m2)}>
-          ⭐️{extra.base_experience} {'  '} 📏 {extra.height} cm {'  '} ⚖️
-          {extra.weight} kg
-        </Text>
+        <MainSkills extra={extra} />
+
         {extra.stats && <PokeStats list={Object.values(extra.stats)} />}
 
         <Text style={[fonts.subtitle, C.selfStart, C.my4]}> Moves</Text>
         <FlatList
           data={Object.values(extra.moves)}
           numColumns={4}
-          style={[{maxHeight: deviceHeight * 0.5, width: deviceWidth * 0.8}, bordColor(colors.blue), C.radius2, C.my4]}
+          style={[
+            {
+              maxHeight: deviceHeight * 0.5,
+              width: deviceWidth * 0.8,
+            },
+            bordColor(colors.blue),
+            C.radius2,
+            C.my4,
+          ]}
           renderItem={({item, index}) => (
             <Text
               style={[
