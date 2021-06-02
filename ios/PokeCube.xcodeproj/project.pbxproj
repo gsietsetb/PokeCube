@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		56D4F3767979ECE26A2D3A66 /* libPods-PokeCube-PokeCubeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 212478E9F5D643023BC9D4EC /* libPods-PokeCube-PokeCubeTests.a */; };
+		7A1327C45F27B96EA14DE147 /* libPods-PokeCube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC1C494739247FA32C81BC02 /* libPods-PokeCube.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		C397931C41C4999A2FE4BF74 /* libPods-PokeCube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C9A78841938437320AEAF2C /* libPods-PokeCube.a */; };
+		CD5505441AF91E803FE4F23E /* libPods-PokeCube-PokeCubeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44ECDE6C84B4B84214CD0CC0 /* libPods-PokeCube-PokeCubeTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +36,13 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = PokeCube/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = PokeCube/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PokeCube/main.m; sourceTree = "<group>"; };
-		212478E9F5D643023BC9D4EC /* libPods-PokeCube-PokeCubeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeCube-PokeCubeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C9A78841938437320AEAF2C /* libPods-PokeCube.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeCube.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44ECDE6C84B4B84214CD0CC0 /* libPods-PokeCube-PokeCubeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeCube-PokeCubeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		68EB7246F178C3EDD9F0071C /* Pods-PokeCube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube.debug.xcconfig"; path = "Target Support Files/Pods-PokeCube/Pods-PokeCube.debug.xcconfig"; sourceTree = "<group>"; };
+		71D11E85E9D2F6CB458055B7 /* Pods-PokeCube-PokeCubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube-PokeCubeTests.release.xcconfig"; path = "Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PokeCube/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		888AB955436FA3EA1104FFA6 /* Pods-PokeCube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube.debug.xcconfig"; path = "Target Support Files/Pods-PokeCube/Pods-PokeCube.debug.xcconfig"; sourceTree = "<group>"; };
-		90FCCA2A1A23D97A88E63D59 /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube-PokeCubeTests.debug.xcconfig"; path = "Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE9DA891BC277DBDC8686BBF /* Pods-PokeCube-PokeCubeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube-PokeCubeTests.release.xcconfig"; path = "Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests.release.xcconfig"; sourceTree = "<group>"; };
-		E092FD096A4A6A8EAF98C37D /* Pods-PokeCube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube.release.xcconfig"; path = "Target Support Files/Pods-PokeCube/Pods-PokeCube.release.xcconfig"; sourceTree = "<group>"; };
+		C0B36014FA7DC8E348BA295D /* Pods-PokeCube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube.release.xcconfig"; path = "Target Support Files/Pods-PokeCube/Pods-PokeCube.release.xcconfig"; sourceTree = "<group>"; };
+		C5F3FC2A475707C5B9414D9F /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeCube-PokeCubeTests.debug.xcconfig"; path = "Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CC1C494739247FA32C81BC02 /* libPods-PokeCube.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PokeCube.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56D4F3767979ECE26A2D3A66 /* libPods-PokeCube-PokeCubeTests.a in Frameworks */,
+				CD5505441AF91E803FE4F23E /* libPods-PokeCube-PokeCubeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C397931C41C4999A2FE4BF74 /* libPods-PokeCube.a in Frameworks */,
+				7A1327C45F27B96EA14DE147 /* libPods-PokeCube.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,12 +96,23 @@
 			name = PokeCube;
 			sourceTree = "<group>";
 		};
+		292CB4C780B458505F572F28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68EB7246F178C3EDD9F0071C /* Pods-PokeCube.debug.xcconfig */,
+				C0B36014FA7DC8E348BA295D /* Pods-PokeCube.release.xcconfig */,
+				C5F3FC2A475707C5B9414D9F /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */,
+				71D11E85E9D2F6CB458055B7 /* Pods-PokeCube-PokeCubeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				2C9A78841938437320AEAF2C /* libPods-PokeCube.a */,
-				212478E9F5D643023BC9D4EC /* libPods-PokeCube-PokeCubeTests.a */,
+				CC1C494739247FA32C81BC02 /* libPods-PokeCube.a */,
+				44ECDE6C84B4B84214CD0CC0 /* libPods-PokeCube-PokeCubeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +132,7 @@
 				00E356EF1AD99517003FC87E /* PokeCubeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				D5C5DEFC649911755801AEC8 /* Pods */,
+				292CB4C780B458505F572F28 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,17 +148,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D5C5DEFC649911755801AEC8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				888AB955436FA3EA1104FFA6 /* Pods-PokeCube.debug.xcconfig */,
-				E092FD096A4A6A8EAF98C37D /* Pods-PokeCube.release.xcconfig */,
-				90FCCA2A1A23D97A88E63D59 /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */,
-				BE9DA891BC277DBDC8686BBF /* Pods-PokeCube-PokeCubeTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "PokeCubeTests" */;
 			buildPhases = (
-				36AFE1E42E0A1EA534E8DAF3 /* [CP] Check Pods Manifest.lock */,
+				22B73D04AF016011D5CAAE37 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				6FA33B044753F1D3D61C1642 /* [CP] Embed Pods Frameworks */,
-				74867FEF0F764FFFB00CF68B /* [CP] Copy Pods Resources */,
+				860CB53D8477BAC590290D1A /* [CP] Embed Pods Frameworks */,
+				004873BFE2F2C102953967D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "PokeCube" */;
 			buildPhases = (
-				84457A0B476811FD04B8F29C /* [CP] Check Pods Manifest.lock */,
+				23B52345DBA7862062CDBF8E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				2C99FFB527EB4F367DCAC64E /* [CP] Embed Pods Frameworks */,
-				E9312C8399DE689FB82E7CEC /* [CP] Copy Pods Resources */,
+				3B2E46DCDADCC2C0E13E41FC /* [CP] Embed Pods Frameworks */,
+				4A4F8212A74F31AB4E46F5FA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +250,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		004873BFE2F2C102953967D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,24 +281,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		2C99FFB527EB4F367DCAC64E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		36AFE1E42E0A1EA534E8DAF3 /* [CP] Check Pods Manifest.lock */ = {
+		22B73D04AF016011D5CAAE37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -303,41 +303,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6FA33B044753F1D3D61C1642 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		74867FEF0F764FFFB00CF68B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		84457A0B476811FD04B8F29C /* [CP] Check Pods Manifest.lock */ = {
+		23B52345DBA7862062CDBF8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -359,7 +325,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E9312C8399DE689FB82E7CEC /* [CP] Copy Pods Resources */ = {
+		3B2E46DCDADCC2C0E13E41FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A4F8212A74F31AB4E46F5FA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,6 +357,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube/Pods-PokeCube-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		860CB53D8477BAC590290D1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PokeCube-PokeCubeTests/Pods-PokeCube-PokeCubeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90FCCA2A1A23D97A88E63D59 /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */;
+			baseConfigurationReference = C5F3FC2A475707C5B9414D9F /* Pods-PokeCube-PokeCubeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE9DA891BC277DBDC8686BBF /* Pods-PokeCube-PokeCubeTests.release.xcconfig */;
+			baseConfigurationReference = 71D11E85E9D2F6CB458055B7 /* Pods-PokeCube-PokeCubeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 888AB955436FA3EA1104FFA6 /* Pods-PokeCube.debug.xcconfig */;
+			baseConfigurationReference = 68EB7246F178C3EDD9F0071C /* Pods-PokeCube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +506,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E092FD096A4A6A8EAF98C37D /* Pods-PokeCube.release.xcconfig */;
+			baseConfigurationReference = C0B36014FA7DC8E348BA295D /* Pods-PokeCube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
