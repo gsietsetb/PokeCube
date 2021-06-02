@@ -1,11 +1,10 @@
-import C, { apply } from 'consistencss';
+import C, {apply} from 'consistencss';
 import Modal from 'modal-enhanced-react-native-web';
 import React from 'react';
-import { Text, TouchableOpacity, View } from 'react-native';
-import { pokeStore } from '../App';
-import { fonts } from '../style/gStyles';
-import { PokemonDetails } from './PokeSummary';
-
+import {Text, TouchableOpacity, View} from 'react-native';
+import {pokeStore} from '../App';
+import {fonts} from '../style/gStyles';
+import {PokemonDetails} from './PokeSummary';
 
 export const PokeDetailsModal = ({
   visibe = false,
@@ -18,13 +17,7 @@ export const PokeDetailsModal = ({
     onPress={closeModal}>
     <Modal isVisible={visibe} onBackdropPress={closeModal}>
       <TouchableOpacity activeOpacity={1} onPress={() => {}}>
-        <View
-          style={[
-            C.itemsCenter,
-            C.justifyCenter,
-            C.bgWhite,
-            C.radius2,
-          ]}>
+        <View style={[C.itemsCenter, C.justifyCenter, C.bgWhite, C.radius2]}>
           {pokemon && <PokemonDetails pokemon={pokemon} />}
         </View>
         )}

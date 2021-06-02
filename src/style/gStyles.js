@@ -1,12 +1,11 @@
 import chroma from 'chroma-js';
-import C, { apply, boxShadow } from 'consistencss';
-import { Dimensions, Platform } from 'react-native';
+import C, {apply, boxShadow} from 'consistencss';
+import {Dimensions, Platform} from 'react-native';
 
 export const DESKTOP_HUGE = 1440;
 export const DESKTOP = 1024;
 export const TABLET = 768;
 export const MOBILE = 375;
-
 
 export const textColor = color => ({color: color});
 export const tintColor = color => ({tintColor: color});
@@ -16,7 +15,6 @@ export const percHeight = (perc = 1) => ({height: deviceHeight * perc});
 
 /**Responsiveness*/
 export const isWeb = Platform.OS === 'web';
-
 
 export const w100 = (num = 70) => ({maxWidth: deviceWidth * num});
 export const h100 = (num = 70) => ({maxHeight: deviceHeight * num});
@@ -47,7 +45,6 @@ export const respWrap = [
 
 /**Most important container*/
 export const respWidth = [respS ? C.maxw180 : maxWidth(0.7)];
-
 
 export const colors = {
   blue: '#355eb9',
@@ -141,11 +138,12 @@ export const topBorder = {
 };
 
 export const imgs = {
-  sideCube: {uri: 'https://3sidedcube.com/app/themes/tsc-2018/img/svgs/logo-dark.svg'},
+  sideCube: {
+    uri: 'https://3sidedcube.com/app/themes/tsc-2018/img/svgs/logo-dark.svg',
+  },
   charm: isWeb
     ? {
-        uri:
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png',
+        uri: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png',
       }
     : require('../assets/charm.png'),
   spin: {uri: 'https://i.ibb.co/VCF4Rw4/mvprio.gif'},

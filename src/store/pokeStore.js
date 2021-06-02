@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { makeAutoObservable, toJS } from 'mobx';
+import {makeAutoObservable, toJS} from 'mobx';
 
 const BASE_API = 'https://pokeapi.co/api/v2/';
 
@@ -27,7 +27,7 @@ export const fetchAPI = async ({
   param,
 }) => {
   try {
-    const URL = url || ( baseURL + endpoint ); /*query + (param ? param : ''))*/
+    const URL = url || baseURL + endpoint; /*query + (param ? param : ''))*/
     const res = await fetch(URL);
     const result = await res.json();
     console.log('Fetch', URL, result);
@@ -87,11 +87,12 @@ export const PokeStore = () =>
       this.loading = true;
       /*if (paginate) {this.pagIndex++;}*/
       const {count, next, previous, results} = await fetchAPI(
-        !_.isEmpty(this.nextUrl) && { url: this.nextUrl},);
-        this.list = paginate ? this.list.concat(results) : results;
-        this.count = count;
-        this.prevUrl = previous;
-        this.nextUrl = next;
+        !_.isEmpty(this.nextUrl) && {url: this.nextUrl},
+      );
+      this.list = paginate ? this.list.concat(results) : results;
+      this.count = count;
+      this.prevUrl = previous;
+      this.nextUrl = next;
       this.loading = false;
     },
   });
